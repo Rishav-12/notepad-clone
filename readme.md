@@ -14,4 +14,4 @@ An application that helps you take quick notes
 * Just run the main.py file to open up the editor
 * Save your notes to your desired location
 * Can also open previously saved notes
-* **Save** and **Open** options are on the menubar
+* Many basic features available on the Menu Bar
