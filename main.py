@@ -3,6 +3,11 @@ from tkinter import *
 from tkinter import filedialog as fd
 from tkinter import messagebox
 
+global open_file
+global is_old
+open_file = None
+is_old = False
+
 root = Tk()
 root.geometry("900x450")
 root.title("Tkinter Notes")
@@ -10,18 +15,40 @@ icon = PhotoImage(file = 'notes.png')
 root.iconphoto(True, icon)
 
 def newNote():
+	global open_file
+	global is_old
+
 	text.delete(1.0, END)
+	root.title("Tkinter Notes")
+	open_file = None
+	is_old = False
 
 def saveNote():
-	f = fd.asksaveasfilename(filetypes = (("Text files", "*.txt"), ("All files", "*.*")))
-	with open(f, "w") as file:
-		file.write(text.get(1.0, "end-1c"))
+	global open_file
+	global is_old
+
+	if is_old:
+		with open(open_file, "w") as file:
+			file.write(text.get(1.0, "end-1c"))
+	else:
+		f = fd.asksaveasfilename(filetypes = (("Text files", "*.txt"), ("All files", "*.*")))
+		with open(f, "w") as file:
+			file.write(text.get(1.0, "end-1c"))
+		root.title(f)
 
 def openNote():
+	global open_file
+	global is_old
+
 	f = fd.askopenfilename(filetypes = (("Text files", "*.txt"), ("All files", "*.*")))
 	text.delete(1.0, END)
+
 	with open(f, "r") as file:
 		text.insert(1.0, file.read())
+	
+	is_old = True
+	open_file = f
+	root.title(f)
 
 def cut():
 	text.event_generate(("<<Cut>>"))
