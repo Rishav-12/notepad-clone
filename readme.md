@@ -1,5 +1,5 @@
-# notes
-An application that helps you take quick notes
+# notepad-clone
+A notepad-like application built with Tkinter
 
 ### Motivation
 1. Wanted to create a notepad clone, work with files and explore more with tkinter
