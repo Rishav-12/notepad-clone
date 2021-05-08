@@ -93,6 +93,7 @@ scroll.pack(side = RIGHT, fill = Y)
 text = Text(root, yscrollcommand = scroll.set)
 text.pack(fill = BOTH)
 text.configure(font = ("Comic Sans MS", 20))
+text.focus()
 
 scroll.config(command = text.yview)
 
