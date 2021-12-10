@@ -60,7 +60,7 @@ def paste():
 	text.event_generate(("<<Paste>>"))
 
 def aboutApp():
-	messagebox.showinfo("About", "Made with 💙 by Rishav Mitra")
+	messagebox.showinfo("About", "Made with love by Rishav Mitra")
 
 menubar = Menu(root)
 # File menu Starts
