@@ -11,6 +11,6 @@ A minimalistic text editor built with Python's Tkinter library
 
 ### How to use
 * Simply run the `main.py` file to open up the editor
-* Use can save their notes to their desired location
+* User can save their notes to their desired location
 * They can also open previously saved notes
 * Many basic features are available on the Menu Bar
