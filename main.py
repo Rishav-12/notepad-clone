@@ -10,7 +10,7 @@ is_old = False
 
 root = Tk()
 root.geometry("900x450")
-root.title("Tkinter Notes")
+root.title("wrote")
 icon = PhotoImage(file = 'notes.png')
 root.iconphoto(True, icon)
 
@@ -19,7 +19,7 @@ def newNote():
 	global is_old
 
 	text.delete(1.0, END)
-	root.title("Tkinter Notes")
+	root.title("wrote")
 	open_file = None
 	is_old = False
 
@@ -60,7 +60,7 @@ def paste():
 	text.event_generate(("<<Paste>>"))
 
 def aboutApp():
-	messagebox.showinfo("About", "Notepad Clone by Rishav Mitra using Tkinter")
+	messagebox.showinfo("About", "Made with love by Rishav Mitra")
 
 menubar = Menu(root)
 # File menu Starts
